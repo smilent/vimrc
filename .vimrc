@@ -61,3 +61,14 @@ set smarttab
 
 " always uses spaces instead of tab characters
 set expandtab
+
+" show encoding
+" set fileencoding
+
+" show file status bar
+set laststatus=2
+
+set statusline=%F\ %m%r\ line\ %l\ of\ %L\ --%p%%--\ col\ %c%=%{&fileencoding?&fileencoding:&encoding}
+if has("statusline")
+" set statusline=%<%F\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
+endif
